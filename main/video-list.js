@@ -1,3 +1,47 @@
+/* let allVideos = // 20240501131020
+// http://localhost:3000/videos
+
+[
+  {
+    name: "Adrián entrega un regalo a Julia.mp4",
+    src: "https://alas.uv.mx/portal/interior/video/frases/Adria%CC%81n%20entrega%20un%20regalo%20a%20julia.mp4",
+    id: "vid_1"
+  },
+  {
+    name: "Ana exprime limón.mp4",
+    src: "https://alas.uv.mx/portal/interior/video/frases/Ana exprime limón.mp4",
+    id: "vid_2"
+  },
+
+];
+
+// Función para generar el código JavaScript a partir de la lista de videos recibida
+function generarCodigoJavaScript(allVideos) {
+    let jsCode = 'let allVideos = [\n';
+    allVideos.forEach(video => {
+        // Escapar las comillas simples en el nombre y la src
+        let escapedName = video.name.replace(/'/g, "\\'");
+        let escapedSrc = video.src.replace(/'/g, "\\'");
+        
+        // Agregar el objeto de video al código JavaScript
+        jsCode += `   {\n`;
+        jsCode += `      name: '${escapedName}',\n`;
+        jsCode += `      src: '${escapedSrc}',\n`;
+        jsCode += `      id: '${video.id}'\n`;
+        jsCode += `   },\n`;
+    });
+    jsCode += `];\n`;
+
+    console.log(jsCode); // Mostrar el código generado en la consola
+}
+
+// Llamar a la función para generar el código JavaScript
+generarCodigoJavaScript(allVideos);
+ */
+
+
+
+
 const frases = [
   'Abril lee un libro',
   'Adrián entrega un regalo a Julia',

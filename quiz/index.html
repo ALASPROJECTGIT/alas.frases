@@ -14,11 +14,9 @@
             <p id="pregunta-texto" class="pregunta"></p>
             <div id="opciones-container" class="opciones d-flex flex-wrap justify-content-center"></div>
         </div>
-        <div class="progress w-100 mb-4">
-            <div id="barra-progreso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
         <p id="resultado" class="resultado mb-4"></p>
-        <button id="siguiente-btn" class="btn btn-primary" onclick="cargarSiguientePregunta()">Siguiente</button>
+        <a id="siguiente-btn" class="btn btn-primary" href="#" style="display: none;">Siguiente</a>
+        <button id="reintentar-btn" class="btn btn-secondary" onclick="reiniciarPrueba()" style="display: none;">Reintentar</button>
     </div>
 
     <!-- Modal de Fin -->
