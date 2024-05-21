@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz de Videos</title>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
+        <h6 class="titulo mt-4 mb-3">Haz clic en el video de la frase</h6>
+        <div id="pregunta-container" class="mb-4 w-100">
+            <p id="pregunta-texto" class="pregunta"></p>
+            <div id="opciones-container" class="opciones d-flex flex-wrap justify-content-center"></div>
+        </div>
+        <div class="progress w-100 mb-4">
+            <div id="barra-progreso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p id="resultado" class="resultado mb-4"></p>
+        <button id="siguiente-btn" class="btn btn-primary" onclick="cargarSiguientePregunta()">Siguiente</button>
+    </div>
+
+    <!-- Modal de Fin -->
+    <div class="modal fade" id="finModal" tabindex="-1" aria-labelledby="finModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="finModalLabel">Fin del Quiz</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Has completado todas las preguntas. ¡Buen trabajo!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    <button type="button" class="btn btn-secondary" id="reiniciar-btn">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

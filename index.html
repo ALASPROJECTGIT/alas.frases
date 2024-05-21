@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Frases y señas</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div id="video_player">
+                <video id="main-Video" class="plyr__video-embed" controls autoplay></video>
+                <h2 class="title" style="display: none;"></h2> <!-- Ocultar el título -->
+            </div>
+            <div class="controls">
+                <button id="nextBtn" class="plyr__control"><i class="fa fa-forward" ></i> Siguiente</button>
+                <a href="./quiz/index.html" class="evaluacion-button"><i class="fa fa-check-circle"></i> Evaluación</a>
+            </div>
+            <ul id="playlist" style="display: none;"></ul> <!-- Ocultar la lista de reproducción -->
+        </div>
+    </section>
+    <script src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
+    <script src="./video-list.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
