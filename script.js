@@ -4,9 +4,9 @@ const player = new Plyr('#main-Video', {
     autoplay: true
 });
 
-// Obtener el botón de "Siguiente"
+// Obtener el botón de "Siguiente" y "Evaluación"
 const nextBtn = document.getElementById('nextBtn');
-
+const evaluacionBtn = document.getElementById('evaluacionBtn');
 
 // Inicializar índice de video
 let videoIndex = 0;
@@ -86,12 +86,12 @@ player.on('ready', () => {
     player.play(); // Reproducir el video cuando el reproductor está listo
 });
 
-// Escuchar el evento 'ended' del reproductor Plyr para mostrar el botón "Siguiente"
+// Escuchar el evento 'ended' del reproductor Plyr para mostrar el botón "Evaluación"
 player.on('ended', () => {
-    mostrarBotonSiguiente();
+    mostrarBotonEvaluacion();
 });
 
-// Función para mostrar el botón "Siguiente"
-function mostrarBotonSiguiente() {
-    nextBtn.style.display = 'block';
+// Función para mostrar el botón "Evaluación"
+function mostrarBotonEvaluacion() {
+    evaluacionBtn.style.display = 'block';
 }
