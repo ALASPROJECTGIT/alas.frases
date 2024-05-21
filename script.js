@@ -7,6 +7,7 @@ const player = new Plyr('#main-Video', {
 // Obtener el botón de "Siguiente"
 const nextBtn = document.getElementById('nextBtn');
 
+
 // Inicializar índice de video
 let videoIndex = 0;
 
