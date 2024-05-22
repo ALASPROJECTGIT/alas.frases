@@ -1,3 +1,5 @@
+// JavaScript
+
 const frases = [
     'Abril lee un libro',
     'Adrián entrega un regalo a Julia',
@@ -100,11 +102,15 @@ const frases = [
     'Sandra lame la paleta',
     'Sara entrega un regalo a Mara',
     'Sara exprime la jerga',
-    'Vale tiene 10 dedos'  
-  ];
-  
-  const baseURL = 'https://alas.uv.mx/portal/interior/video/frases/';
-  
+    'Vale tiene 10 dedos'
+    
+];
+
+const baseURL = 'https://alas.uv.mx/portal/interior/video/frases/';
+
+// Obtener el parámetro videoIndex de la URL
+const urlParams = new URLSearchParams(window.location.search);
+const videoIndex = parseInt(urlParams.get('videoIndex')) || 0;
 
 const preguntas = frases.map(frase => {
     const opciones = obtenerOpcionesAleatorias(frases, frase);
@@ -129,7 +135,8 @@ function obtenerOpcionesAleatorias(array, fraseActual) {
     return opciones;
 }
 
-let indicePreguntaActual = 0;
+let indicePreguntaActual = videoIndex; // Inicializar el índice con videoIndex
+
 const preguntaTexto = document.getElementById('pregunta-texto');
 const opcionesContainer = document.getElementById('opciones-container');
 const resultado = document.getElementById('resultado');
@@ -183,7 +190,7 @@ function verificarRespuesta(src) {
 
 function mostrarBotonSiguiente() {
     siguienteBtn.style.display = 'block';
-    siguienteBtn.href = "http://127.0.0.1:5500/index.html"; // Reemplaza con la URL deseada
+    siguienteBtn.href = `http://127.0.0.1:5500/main/index.html?videoIndex=${indicePreguntaActual+1}`;
 }
 
 function mostrarBotonReintentar() {
@@ -199,17 +206,11 @@ function deshabilitarOpciones() {
     });
 }
 
+// Función para reiniciar la prueba (recargar la página)
 function reiniciarPrueba() {
-    indicePreguntaActual = 0;
-    resultado.textContent = '';
-    cargarPregunta();
+    window.location.reload();
 }
 
-reiniciarBtn.addEventListener('click', function() {
-    indicePreguntaActual = 0;
-    $('#finModal').modal('hide');
-    cargarPregunta();
-});
+reiniciarBtn.addEventListener('click', reiniciarPrueba);
 
 cargarPregunta();
-ss

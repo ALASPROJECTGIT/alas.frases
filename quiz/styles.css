@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -15,24 +16,25 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 1200px;
-  max-height: 90vh;
+  width: 80%;
+  position: relative;
+  margin-bottom: 20px;
+  height:75%; /* Ajustar la altura al 85% de la página */
   overflow-y: auto; /* Scroll vertical si es necesario */
 }
 
 .titulo {
-  font-size: 28px;
+  font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 20px;
-  color: white; /* Añadido para poner las letras en color negro */
+  color: white; /* Añadido para poner las letras en color blanco */
 }
 
 .pregunta {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3.5em;
+  font-size: 4em;
   margin-bottom: 20px;
-  color: white; /* Añadido para poner las letras en color negro */
+  color: white; /* Añadido para poner las letras en color blanco */
 }
 
 .opciones {
@@ -62,17 +64,32 @@ body {
   margin-bottom: 20px;
 }
 
-.btn {
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.buttons-container .btn {
   padding: 10px 20px;
-  font-size: 26px;
+  font-size: 18px;
   border: none;
-  background-color: #007bff;
-  color: #fff;
   border-radius: 5px;
   cursor: pointer;
   margin: 5px;
 }
 
-.btn:hover {
+.custom-btn {
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  background-color: #007bff;
+  color: #fff;
+}
+
+.custom-btn:hover {
   background-color: #0056b3;
 }

@@ -9,14 +9,17 @@
 </head>
 <body>
     <div class="container-fluid d-flex flex-column align-items-center justify-content-center">
-        <h6 class="titulo mt-4 mb-3">Haz clic en el video de la frase</h6>
+        <h6 class="titulo mt-4 mb-3" style="display:none;">Haz clic en el video de la frase</h6>
         <div id="pregunta-container" class="mb-4 w-100">
             <p id="pregunta-texto" class="pregunta"></p>
             <div id="opciones-container" class="opciones d-flex flex-wrap justify-content-center"></div>
         </div>
+
         <p id="resultado" class="resultado mb-4"></p>
-        <a id="siguiente-btn" class="btn btn-primary" href="#" style="display: none;">Siguiente</a>
-        <button id="reintentar-btn" class="btn btn-secondary" onclick="reiniciarPrueba()" style="display: none;">Reintentar</button>
+    </div>
+    <div class="buttons-container text-center mt-4">
+        <a id="siguiente-btn" class="btn custom-btn" href="#" style="display: none;">Siguiente</a>
+        <button id="reintentar-btn" class="btn custom-btn" onclick="reiniciarPrueba()" style="display: none;">Reintentar</button>
     </div>
 
     <!-- Modal de Fin -->
