@@ -7,7 +7,6 @@ const frases = [
     'Alex canta una canción',
     'Alex y Carlos se empujan',
     'Ana abre el coche',
-    'Ana arma los cubos',
     'Ana exprime el limón',
     'Beto toma fotografías',
     'César compara 2 latas de comida',
@@ -31,8 +30,8 @@ const frases = [
     'El piso es de madera',
     'El portafolio es de madera',
     'El recipiente es grande',
-    'El suéter de katia es café',
-    'El supeter de lis es amarillo',
+    'El suéter de Katia es café',
+    'El suéter de Lis es amarillo',
     'El tomate es rojo',
     'El trompo gira',
     'Él vacía el café',
@@ -51,16 +50,15 @@ const frases = [
     'Julia entrega una caja a Paola',
     'La alcancía es azul',
     'La alfombra es gris',
-    'La bicileta es roja',
+    'La bicicleta es roja',
     'La blusa de Ana es blanca',
-    'La blusa de Ana es blanca_1',
     'La bolsa es blanca',
     'La cámara es pequeña',
     'La camisa es azul',
     'La camiseta es negra',
     'La cebolla es blanca',
     'La chamarra es verde',
-    'La clabija es negra',
+    'La clavija es negra',
     'La coladera es roja',
     'La corona navideña es dorada',
     'La crayola es verde',
@@ -88,26 +86,26 @@ const frases = [
     'Lucy compra flores',
     'Luis empuja las pesas',
     'Luis engrapa un sobre morado',
-    'Luis mira dos telefonos celulares',
+    'Luis mira dos teléfonos celulares',
     'Luis y Sara discuten',
     'Luisa abre la puerta',
     'Luisa come una galleta',
     'María acomoda los botes de comida',
-    'Nadia reparte mandarinas_1',
+    'Nadia reparte mandarinas',
     'Nico busca las tijeras',
     'Nicolás arrastra las pesas',
     'Paco y Pepe discuten',
     'Paula empuja a Noe',
-    'Rosa muerde la manzana.',
+    'Rosa muerde la manzana',
     'Sandra lame la paleta',
     'Sara entrega un regalo a Mara',
     'Sara exprime la jerga',
-    'Vale tiene 10 dedos'
+    'Vale tiene 10 dedos'      
     
 ];
 
-const baseURL = 'https://alas.uv.mx/portal/interior/video/frases/';
-
+const baseURL = 'https://alas.uv.mx/portal/interior/video/Seleccion/';
+//https://alas.uv.mx/portal/interior/video/Seleccion/Abril lee un libro.mp4
 // Obtener el parámetro videoIndex de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const videoIndex = parseInt(urlParams.get('videoIndex')) || 0;
